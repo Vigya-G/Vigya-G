@@ -23,14 +23,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      # Generate the snake animation
+      # Generate the snake animation (GIF + SVG)
       - name: Generate Snake
-        uses: Platane/snk/svg-only@v3
+        uses: Platane/snk@v3
         with:
-          github_user_name: Vigya-G
+          github_user_name: vigyagupta  # ⚠️ CHANGE THIS TO YOUR USERNAME
           outputs: |
+            dist/github-contribution-grid-snake.gif
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      # Show git status for debugging
+      - name: Show build status
+        run: git status
 
       # Push the generated files to the output branch
       - name: Push to output branch
