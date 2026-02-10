@@ -27,7 +27,7 @@ jobs:
       - name: Generate Snake
         uses: Platane/snk@v3
         with:
-          github_user_name: vigyagupta  # ⚠️ CHANGE THIS TO YOUR USERNAME
+          github_user_name: Vigya-G
           outputs: |
             dist/github-contribution-grid-snake.gif
             dist/github-contribution-grid-snake.svg
